@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zong Fan | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F2F2F2;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 384px;
+            }
+        }
+        .material-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .material-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.375rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #00A6ED;
+            border: 4px solid #F2F2F2;
+        }
+        #publicationsChart {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="text-[#243B4A]">
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#00468B] mb-2">Zong Fan</h1>
+            <h2 class="text-2xl md:text-3xl font-semibold text-[#00A6ED]">Data Scientist & AI Innovator</h2>
+            <p class="mt-4 text-lg max-w-3xl mx-auto">Driving business value through advanced deep learning, multi-modal data integration, and end-to-end development of commercial AI products.</p>
+            <div class="mt-6 flex justify-center items-center space-x-4 text-sm flex-wrap">
+                <a href="mailto:zongfan2@illinois.edu" class="text-[#00468B] hover:text-[#00A6ED]">zongfan2@illinois.edu</a>
+                <span class="text-gray-400">|</span>
+                <a href="https://www.linkedin.com/in/zong-fan-1b8938b9/" target="_blank" rel="noopener noreferrer" class="text-[#00468B] hover:text-[#00A6ED]">LinkedIn</a>
+                <span class="text-gray-400">|</span>
+                <a href="https://github.com/zongfan2" target="_blank" rel="noopener noreferrer" class="text-[#00468B] hover:text-[#00A6ED]">GitHub</a>
+            </div>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <div class="material-card">
+                <h3 class="text-xl font-bold text-center mb-4 text-[#00468B]">Core Competencies</h3>
+                <div class="chart-container">
+                    <canvas id="competenciesChart"></canvas>
+                </div>
+            </div>
+            <div class="material-card text-center flex flex-col justify-center">
+                <h3 class="text-xl font-bold text-[#00468B] mb-4">Education</h3>
+                <p class="font-bold text-lg">Ph.D. in Bioengineering</p>
+                <p class="text-md mb-4">University of Illinois Urbana-Champaign</p>
+                <p class="font-bold text-lg">B.S. in Biological Science</p>
+                <p class="text-md">Zhejiang University</p>
+            </div>
+
+            <div class="material-card lg:col-span-2">
+                <h3 class="text-xl font-bold text-[#00468B] mb-6">Professional Journey</h3>
+                <div class="relative pl-10 border-l-2 border-[#94C5E2]">
+                    <div class="mb-8 pl-4 relative timeline-item">
+                        <p class="font-bold text-lg text-[#00468B]">Data Science Intern</p>
+                        <p class="font-semibold text-md text-[#00A6ED]">Johnson & Johnson | 2025</p>
+                        <p class="text-sm mt-1">Developed foundation models for multi-task time-series analysis from wearable sensor data, employing self-supervised pretraining strategies.</p>
+                    </div>
+                    <div class="mb-8 pl-4 relative timeline-item">
+                        <p class="font-bold text-lg text-[#00468B]">Regulatory & Stewardship Intern</p>
+                        <p class="font-semibold text-md text-[#00A6ED]">Corteva Agriscience | 2025</p>
+                        <p class="text-sm mt-1">Designed a transformer-based model with an attention-based fusion mechanism to predict compound bioactivity by integrating cellular, chemical, and textual data.</p>
+                    </div>
+                    <div class="mb-8 pl-4 relative timeline-item">
+                        <p class="font-bold text-lg text-[#00468B]">Graduate Research Assistant</p>
+                        <p class="font-semibold text-md text-[#00A6ED]">University of Illinois Urbana-Champaign | 2020 - Present</p>
+                        <p class="text-sm mt-1">Developed novel deep learning frameworks for medical image classification and designed self-supervised learning pipelines, leading to multiple high-impact publications.</p>
+                    </div>
+                    <div class="mb-8 pl-4 relative timeline-item">
+                        <p class="font-bold text-lg text-[#00468B]">AI/ML Scientist & Technical Project Manager</p>
+                        <p class="font-semibold text-md text-[#00A6ED]">StartDT Co. Ltd | 2017 - 2020</p>
+                        <p class="text-sm mt-1">Led AI product development for smart retail, deploying lightweight computer vision models on edge devices and reducing hardware costs by 60%.</p>
+                    </div>
+                    <div class="mb-8 pl-4 relative timeline-item">
+                        <p class="font-bold text-lg text-[#00468B]">Data Scientist</p>
+                        <p class="font-semibold text-md text-[#00A6ED]">MaxFun Co. Ltd | 2016 - 2017</p>
+                        <p class="text-sm mt-1">Built time-series models to optimize customer engagement and conducted NLP-driven sentiment analysis on user reviews.</p>
+                    </div>
+                    <div class="pl-4 relative timeline-item">
+                        <p class="font-bold text-lg text-[#00468B]">Bioinformatician</p>
+                        <p class="font-semibold text-md text-[#00A6ED]">BGI Research | 2014 - 2016</p>
+                        <p class="text-sm mt-1">Performed transcriptomic and epigenetic analyses using single-cell RNA-seq and developed gene expression analysis workflows.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="material-card lg:col-span-2">
+                <h3 class="text-xl font-bold text-center mb-4 text-[#00468B]">Research & Publications</h3>
+                <div class="chart-container">
+                    <canvas id="publicationsChart"></canvas>
+                </div>
+                <p class="text-sm text-center mt-4">A strong publication record in top-tier journals and conferences. Click on a section to see the list.</p>
+                <div id="publication-details" class="mt-6">
+                    <div id="abstracts-list" class="hidden">
+                        <h4 class="font-bold text-lg text-center text-[#00468B] mb-2">Abstracts</h4>
+                        <ul class="list-disc list-inside text-sm space-y-2 text-left">
+                            <li>Lu, Changjie, Fan, Zong, et al. "Weak-to-Strong Generalization for Interpretable Deep Learning-Based Histological Image Classification Guided By Hand-Crafted Features", AAPM annual meeting 2025.</li>
+                            <li>Rita Huan-Ting, Peng, Fan, Zong, et al. "Integrating Foundation Model with Self-Supervised Learning for Brain Lesion Segmentation with Multimodal and Diverse MRI Datasets", AAPM annual meeting 2025.</li>
+                            <li>Fan, Zong, et al. "Application of Masked Autoencoder for Self-Supervised Breast Tumor Classification on Ultrasound Images", AAPM annual meeting 2023.</li>
+                            <li>Fan, Zong, et al. "Multi-Class Classification based on Multi-Loss Strategy and Auxiliary Deep Learning Network with Applications in Medical Imaging", AAPM Annual Meeting 2021.</li>
+                        </ul>
+                    </div>
+                    <div id="conference-proceedings-list" class="hidden">
+                        <h4 class="font-bold text-lg text-center text-[#00468B] mb-2">Conference Proceedings</h4>
+                        <ul class="list-disc list-inside text-sm space-y-2 text-left">
+                            <li>Rita Huan-Ting, Peng, Fan, Zong, et al. "Asynchronous EEG-to-fMRI Translation Using Multi-dimensional Feature Mapping in Stroke", IEEE EMBS Conference on Neural Engineering 2025.</li>
+                            <li>Lu, Changjie, Fan, Zong, et al. "Hand-crafted feature-guided histologic image classification via weak-to-strong generalization." Medical Imaging 2025: Digital and Computational Pathology.</li>
+                            <li>Fan, Zong, et al. "Medical image classification using self-supervised learning-based masked autoencoder." Medical Imaging 2024: Image Processing.</li>
+                            <li>Fan, Zong, et al. "Self-supervised learning based on StyleGAN for medical image classification on small labeled dataset." Medical Imaging 2024: Image Processing.</li>
+                            <li>Zhang, Chaojie, Fan, Zong, et al. "Transformer-based classifier with feature aggregation for cancer subtype classification on histopathological images." Medical Imaging 2024: Image Processing.</li>
+                            <li>Wang, Zhimin, Fan, Zong, et al. "Deep-supervised adversarial learning-based classification for digital histologic images." Medical Imaging 2023: Digital and Computational Pathology.</li>
+                            <li>Fan, Zong, et al. "An auxiliary attention-based network for joint classification and localization of breast tumor on ultrasound images." Medical Imaging 2023: Image Processing.</li>
+                            <li>Fan, Zong, et al. "Application of DatasetGAN in medical imaging: preliminary studies." Medical Imaging 2022: Image Processing.</li>
+                            <li>Fan, Zong, et al. "Deep learning-based multi-class COVID-19 classification with x-ray images." Medical Imaging 2021: Image-Guided Procedures, Robotic Interventions, and Modeling.</li>
+                        </ul>
+                    </div>
+                    <div id="journal-papers-list" class="hidden">
+                        <h4 class="font-bold text-lg text-center text-[#00468B] mb-2">Journal Papers</h4>
+                        <ul class="list-disc list-inside text-sm space-y-2 text-left">
+                            <li>Fan, Zong, et al. "A computation-efficient network with feature aggregation for cancer subtype classification on histopathological images." Engineering Applications of Artificial Intelligence (2025).</li>
+                            <li>Zhang, Yan, Ge, Shating, Fan, Zong, et al. "Chemical-sensitized MITOGEN-ACTIVATED PROTEIN KINASE 4 provides insights into its functions in plant growth and immunity", Plant Physiology (2024).</li>
+                            <li>Fan, Zong, et al. "A medical image classification method based on self-regularized adversarial learning." Medical physics (2024).</li>
+                            <li>Fan, Zong, et al. "Joint localization and classification of breast masses on ultrasound images using an auxiliary attention-based framework." Medical image analysis 90 (2023).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+
+            const wrapLabel = (label, maxWidth = 16) => {
+                if (label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxWidth) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+
+            const globalChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#243B4A'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            };
+
+            const colors = {
+                blue: '#00A6ED',
+                darkBlue: '#00468B',
+                lightBlue: '#94C5E2',
+                darkText: '#243B4A',
+                grey: '#F2F2F2'
+            };
+
+            new Chart(document.getElementById('competenciesChart'), {
+                type: 'radar',
+                data: {
+                    labels: ['Deep Learning', 'Time-Series Analysis', ['Computer', 'Vision'], ['Multi-Modal', 'AI'], 'Product Leadership', ['Self-Supervised', 'Learning']],
+                    datasets: [{
+                        label: 'Expertise Level',
+                        data: [95, 90, 92, 90, 85, 95],
+                        backgroundColor: 'rgba(0, 166, 237, 0.2)',
+                        borderColor: colors.blue,
+                        pointBackgroundColor: colors.blue,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: colors.blue
+                    }]
+                },
+                options: {
+                    ...globalChartOptions,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(36, 59, 74, 0.2)' },
+                            grid: { color: 'rgba(36, 59, 74, 0.2)' },
+                            min: 80,
+                            max: 100,
+                            pointLabels: { 
+                                color: colors.darkText,
+                                font: {
+                                    size: 14
+                                }
+                            },
+                            ticks: {
+                                backdropColor: 'transparent',
+                                color: colors.darkText,
+                                stepSize: 5
+                            }
+                        }
+                    }
+                }
+            });
+
+            const publicationsChartCanvas = document.getElementById('publicationsChart');
+            const publicationsChart = new Chart(publicationsChartCanvas, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Abstracts', 'Conference Proceedings', 'Journal Papers'],
+                    datasets: [{
+                        data: [4, 9, 4],
+                        backgroundColor: [colors.lightBlue, colors.blue, colors.darkBlue],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: { ...globalChartOptions }
+            });
+
+            publicationsChartCanvas.onclick = (evt) => {
+                const activePoints = publicationsChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+                if (activePoints.length) {
+                    const dataIndex = activePoints[0].index;
+                    
+                    document.getElementById('journal-papers-list').classList.add('hidden');
+                    document.getElementById('conference-proceedings-list').classList.add('hidden');
+                    document.getElementById('abstracts-list').classList.add('hidden');
+
+                    if (dataIndex === 0) {
+                        document.getElementById('abstracts-list').classList.remove('hidden');
+                    } else if (dataIndex === 1) {
+                        document.getElementById('conference-proceedings-list').classList.remove('hidden');
+                    } else if (dataIndex === 2) {
+                        document.getElementById('journal-papers-list').classList.remove('hidden');
+                    }
+                }
+            };
+        });
+    </script>
+</body>
+</html>
+
